@@ -13,7 +13,31 @@ export default StyleSheet.create({
         alignSelf: 'center',
     },
     heading: {
-        fontSize:20,
-        fontWeight:'bold'
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
+    example: {
+        flex: 1,
+        position: 'relative'
+    },
+    flipViewExample: {
+        width: 200,
+        height: 200,
+        position: 'relative',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    flipView: {
+        backgroundColor: '#3bcaff',
+        backfaceVisibility: 'hidden',
+        width: 200,
+        height: 200,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    flipViewBack: {
+        position: 'absolute',
+        backgroundColor: '#ff4200',
+        top: 0,
     }
 })
