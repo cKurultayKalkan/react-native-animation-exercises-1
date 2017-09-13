@@ -14,7 +14,8 @@ export default StyleSheet.create({
     },
     heading: {
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        marginTop:30
     },
     example: {
         flex: 1,
