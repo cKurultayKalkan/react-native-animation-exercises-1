@@ -68,20 +68,17 @@ class App extends Component {
 
     flipCard() {
         if (this.animations.flip.flipDegree >= 90) {
-            Animated.timing(this.animations.flip.flip.value, {toValue: 0, duration: 1000}).start();
-            this.setOpacity(true);
+            Animated.parallel([
+                Animated.timing(this.animations.flip.flip.value, {toValue: 0, duration: 1000}).start(),
+                Animated.timing(this.animations.flip.opacity.value, {toValue: 1, duration: 1000}).start()
+            ]);
         }
         else {
-            Animated.timing(this.animations.flip.flip.value, {toValue: 180, duration: 1000}).start();
-            this.setOpacity();
-        }
-    }
 
-    setOpacity(status) {
-        if (status) {
-            Animated.timing(this.animations.flip.opacity.value, {toValue: 1, duration: 1000}).start();
-        } else {
-            Animated.timing(this.animations.flip.opacity.value, {toValue: 0, duration: 1000}).start();
+            Animated.parallel([
+                Animated.timing(this.animations.flip.flip.value, {toValue: 180, duration: 1000}).start(),
+                Animated.timing(this.animations.flip.opacity.value, {toValue: 0, duration: 1000}).start()
+            ])
         }
     }
 
