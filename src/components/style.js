@@ -18,7 +18,6 @@ export default StyleSheet.create({
         marginTop:30
     },
     example: {
-        flex: 1,
         position: 'relative'
     },
     flipViewExample: {

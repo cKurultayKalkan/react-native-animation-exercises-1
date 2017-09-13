@@ -1,21 +1,14 @@
 import React, {Component} from 'react';
 
 import {
-    Platform,
-    StyleSheet,
     Text,
-    ScrollView,
     View,
-    Image,
-    TouchableHighlight,
     TouchableOpacity,
-    Switch,
-    Dimensions,
     Animated,
     Easing,
-    LayoutAnimation,
-    UIManager
 } from 'react-native';
+
+import StatefulButton from './StatefulButton'
 
 import style from './style.js';
 
@@ -136,6 +129,9 @@ class App extends Component {
                         </Animated.View>
                     </View>
                 </TouchableOpacity>
+                <View style={style.example}>
+                    <StatefulButton label="Click"/>
+                </View>
             </View>
 
         );
